@@ -11,7 +11,14 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+        int i = 0;
+
+        while (i < this.personArray.length){
+            result.append(this.personArray[i]);
+            i++;
+
+        }
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -21,13 +28,19 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
+        return result.toString();
     }
 
 
 
     public String forLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
+
+        for (int i = 0; i < this.personArray.length; i++){
+            result.append(this.personArray[i]);
+
+        }
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -39,13 +52,21 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
+        for (Person currentPerson:personArray) {
+            result.append(currentPerson);
+
+
+        }
+
+
         // identify array's type
         // identify array's variable-name
 
@@ -55,7 +76,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
